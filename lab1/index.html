@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+          <title>Pardo's!</title>
+          <!--CSS rules can be spread across several external stylesheets by adding multiple <link/> elements to the same page. The order of the <link/> elements matters. Stylesheets that come later will override styles in earlier ones.-->
+          <link rel='stylesheet' href='box-styles.css'/>
+          <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body>
+    <h1>this is a test!</h1>
+    <p class='introduction'>Regards, <br/>
+    This is a very basic world, but it is not nothing ordinary.</p>
+
+    <h2>What is going on in this world?</h2>
+    <p>Honestly, not much right now. However, as this grows you will find many things from stories, images, links, vidoes, etc.</p>
+   <div class='warning'>
+    <h3>Warning!</h3>
+    <p>We have some things we want to state:</p>
+    <ul>
+            <li>This can get crazy, we are not responsible for what you will find here.</li>
+            <li>You might be used to the fancy webpages. This is nothing like it. Sorry.</li>
+            <li>Topics change and vary constanly. Also, there is no order in this world.</li>
+            <li>If you got to this point you must be very bored. Good for you!</li>
+    </ul>
+   </div>
+    <div style='padding-top: 1px'></div>
+    <hr/>
+
+    <h3>Rembrand's statements:</h3>
+    <p>These are just a few of <em>Rembrand</em>'s statements over the last year:</p>
+    <ol>
+            <li>"Woke up again. Not thrilled, but I'll see hwo it plays out."</li>
+            <li>"I learn form the mistkaes of people who took my advice."</li>
+            <li>"<strong>God</strong> has allowed me to live another day and I'm about to make it everyone's problem."</li>
+            <li>"When you ask for someone's name you are essentially asking them what noise you should make to get their attention."</li>
+    </ol>
+
+    <!--Notice that link has target. This will open the link in a different tab-->
+    <!--Notice that style='...' is a inline style. We can stick CSS rules in the style attribute of an HTML element. Like page-specific styles, this is the same CSS syntax we’ve been working with. However, since it’s in an attribute, it needs to be condensed to a single line. Inline styles are the most specific way to define CSS. This will trump everything (external stylesheet and page-specific styles)-->
+    <p>You can find similar comments and ideas here: <a id='ryan-link' href='https://twitter.com/VancityReynolds?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor' target= '_blank' style='color: #007FFF;'>Ryan Reynolds' Twitter page</a>. A very funny page.</p>
+
+    <hr/>
+
+    <p>Time for you to go to the next page. Click here <a href='page-two.html'>Second Page</a>.</p>
+
+    <!--alt attributes to your <img/> elements is a best practice. It defines a “text alternative” to the image being displayed. This has an impact on both search engines and users with text-only browsers-->
+
+    <div class='button call-toaction'>Button</div>
+
+    <center><img src='https://i.insider.com/56e71048dd0895ed158b469b?width=700&format=jpeg&auto=webp' width='175' alt='Batman symbol'/></center>
+  </body>
+</html>
