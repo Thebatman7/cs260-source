@@ -1,0 +1,250 @@
+/*Resetting default box behavior.*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "OCR A Std", "Lucida Console", monospace;
+    box-sizing: border-box;
+  }
+
+  .menu-container {
+      /*
+      The first step in using flexbox is to turn one of our HTML elements into a flex container.
+      We do this with the display property. By giving it a value of flex, we’re telling the browser that everything 
+      in the box should be rendered with flexbox instead of the default box model.
+      This enables the flexbox layout mode—without it, the browser would ignore all the flexbox properties that we’re about to introduce.
+      Explicitly defining flex containers means that you can mix and match flexbox with other layout models 
+      */
+      display: flex;
+      color: #ffffff;
+      background-color: #0e3785;
+      /* position:absolute; */
+      /* margin-left: calc(50% - 50vw); */
+      /* width: 100vw; */
+      width: 100%;
+      justify-content: space-between;
+      height: 70px;
+  }
+
+  .logo {
+    display: flex;
+    width: auto;
+    justify-content: start;
+    align-content: stretch;
+  }
+  .parker-logo {
+    width: 100%;
+    height: 100%; 
+    object-fit: contain;
+  }
+
+
+  .menu {
+      font-size: 20px;
+      /* border: 1px solid rgb(255, 255, 255); */
+      width: 500px;
+      justify-content: space-between;
+      justify-content: flex-end;
+      display: flex;
+  }
+
+  .home,
+  .portfolio,
+  .reviews,
+  .about {
+      align-self: center;
+      /*
+      Auto-margins can be used as an alternative to an extra <div> when trying to align a group of items to the left/right of a container.
+      Think of auto-margins as a “divider” for flex items in the same container.
+      */
+      margin: auto;
+  }
+
+
+  .reviews-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+  }
+  .review {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid rgba(85, 138, 238, 0.699);
+  }
+
+  .review p {
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+  }
+  .reviews-container img {
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin: 10px;
+    border-radius: 200%;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /*makes the footer stay below content*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-item {
+    /*That flex: 1; line tells the items to stretch to match the width of .footer.*/
+    border: 1px solid #fff;
+    background-color: #0b4fb4;
+    height: 50px;
+    font-size: 40px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-two {
+    /*
+    We can make the second item grow twice as fast as the other two with the following rule.
+    Compare this to the justify-content property, which distributes extra space between items.
+    This is similar, but now we’re distributing that space into the items themselves.
+    The result is full control over how flex items fit into their containers.
+    */
+    flex: 1.5;
+  }
+
+  .footer-one,
+  .footer-three {
+    background-color: #0e3785;
+    /*flex: initial falls back to the item’s explicit width property. This lets us combine static and flexible boxes in complex ways.*/
+    flex: initial;
+    width: 250px;
+    /*
+    Without that flex: initial; line, the flex: 1; declaration would be inherited from the .footer-item rule, causing the width properties to be ignored. 
+    initial fixes this, and we get a flexible layout that also contains fixed-width items.
+    When you resize the browser window, you’ll see that only the middle box in the footer gets resized.
+    */
+  }
+
+  
+  
+/*
+Flexbox gave us a ton of amazing new tools for laying out a web page. Compare these techniques to what we were able to do with floats, and it should be pretty clear that flexbox is a cleaner option for laying out modern websites:
+
+Use display: flex; to create a flex container.
+Use justify-content to define the horizontal alignment of items.
+Use align-items to define the vertical alignment of items.
+Use flex-direction if you need columns instead of rows.
+Use the row-reverse or column-reverse values to flip item order.
+Use order to customize the order of individual elements.
+Use align-self to vertically align individual items.
+Use flex to create flexible boxes that can stretch and shrink.
+*/
+  
+/*
+Flexbox uses two types of boxes that we’ve never seen before: “flex containers” and “flex items”. 
+The job of a flex container is to group a bunch of flex items together and define how they’re positioned.
+Every HTML element that’s a direct child of a flex container is an “item”. Flex items can be manipulated individually,
+but for the most part, it’s up to the container to determine their layout.
+*/
+ /*----------------------------------------------------------------------------------------------*/
+
+/*
+“Responsive design” refers to the idea that your website should display equally well in everything from widescreen monitors to mobile phones.
+It’s an approach to web design and development that eliminates the distinction between the mobile-friendly version of your website and its desktop counterpart. 
+Media queries always begin with the @media “at-rule” followed by some kind of conditional statement, and then some curly braces.
+Inside the curly braces, you put a bunch of ordinary CSS rules.
+The browser only pays attention to those rules if the condition is met.
+*/
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  body {
+      background-color: #2fcf4a;
+  }
+
+  .footer {
+    width: 100%;
+  }
+  .menu-container {
+    width: 100%;
+    position: absolute;
+    display: block;
+    height: fit-content;
+  }
+
+  .menu {
+    border: 1px solid rgb(83, 104, 226);
+    width: 100%;
+    flex: 1;
+    display: block;
+  }
+
+
+  .logo {
+    width: auto;
+  }
+  .parker-logo {
+    width: 100%;
+    height: fit-content;
+  }
+  .photo-grid-item img {
+    height: 150px;
+    border-radius: 1%;
+  }
+  
+  .photo-grid-container {
+    display: block;
+  }
+
+  .footer-one,
+  .footer-two,
+  .footer-three {
+    /*flex: initial falls back to the item’s explicit width property. This lets us combine static and flexible boxes in complex ways.*/
+    width: 100%;
+  }
+}
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-color: #77127a;
+        flex-direction: column;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #ffffff;
+    }
+}
+
+@media (orientation: portrait) {
+  .menu-container, .menu, .footer {
+    flex-direction: column;
+  }
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "OCR A Std", "Lucida Console", monospace;
+}
+.menu a:hover {
+  color: rgb(247, 253, 255);
+  background-color: rgb(41, 126, 76);
+}
+
+.active {
+  color:rgb(29, 168, 87);
+}
