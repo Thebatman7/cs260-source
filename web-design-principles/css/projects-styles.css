@@ -1,0 +1,15 @@
+* {
+  
+}
+
+h1 {
+  color: #FFFFFF;
+}
+
+.construction {
+  background-color: #083b0e;
+  opacity: 19%;
+  height: 20em;
+  border: 1px solid #0beb0b;
+  width: 30em;
+}
