@@ -26,7 +26,7 @@ section:first-child {
   background-color: #0a192f;
 }
 section:nth-child(2) {
-  flex: 6;
+  flex: 7;
   background-color: #0a192f;
 }
 section:last-child {
@@ -39,30 +39,7 @@ section:last-child {
   display: flex;
   margin-top: 5px;
 }
-.about-me-container img {
-  /* float: right; */
-  max-width: 20%;
-  max-height: 20%;
-  border-radius: 60%;
-  
-  height: 100%;
-  width: 100%;
-  float: left;
-  align-self: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 20px;
-  filter: blur(2px);
-  /* filter: sepia(44%) saturate(685%) brightness(83%) hue-rotate(125deg); */
-}
-.about-me-container:hover img {
-  /* opacity: 0.2; */
-  border: 1.5px solid #1bc0b2;
-  filter:none;
-  /* filter: sepia(44%) saturate(685%) brightness(83%) hue-rotate(125deg); */
-  filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.308));
-}
+
 
 .about-me p {
   text-align: justify;
@@ -79,20 +56,7 @@ section:last-child {
   font-size: 150%;
 }
 
-.slcc-link {
-  font-size: 20px;
-  color:rgb(27, 192, 178);
-  font-weight: 100;
 
-  font-size: 90%;
-}
-.slcc-link:hover {
-  text-decoration: none;
-  color: #06D47B;
-}
-.slcc-link:visited {
-  color: #2e5a97;
-}
 
 .intro-hobby {
   margin-top: 3px;
@@ -110,13 +74,14 @@ section:last-child {
   padding: 0 4px;
   justify-content: center;
   margin-top: 0px;
+  align-items: center;
 }
 
 .hobby {
   border: 1px solid #1bc0b225;
   border-radius: 3px;
-  width: 42vh;
-  height: 30vh;
+  width: 45vh;
+  height: 40vh;
   margin: 1vh;
   box-sizing: border-box;
 }
@@ -158,6 +123,12 @@ section:last-child {
   font-size: 1.4em;
 }
 
+.fa-aws {
+  color:rgb(27, 192, 178);
+}
+.fa-java {
+  color:rgb(206, 23, 23);
+}
 .crest p{
   padding-top: 0.2em;
   font-size: 0.9em;
@@ -258,10 +229,5 @@ section:last-child {
   section:last-child {
     display: none;
     flex: 0;
-  }
-
-  .about-me-container {
-    display:block;
-    padding-left: 50px;
   }
 }

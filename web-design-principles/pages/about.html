@@ -16,6 +16,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
     <title>Rembrand Pardo</title>
     <link rel='stylesheet' href='/css/styles.css'/>
+    <link rel='stylesheet' href='/css/about-styles.css'/>
   </head>
 
   <body>
@@ -23,78 +24,154 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="../index.html"><img class='logo' src="/images/brand1.png"></a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!--justify-content-end moves the content to the right-->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-
-        <ul class="navbar-nav">
-          <!--All pages start with "/", meaning the top folder of your site-->
-          <li class="nav-item">
-            <a class="nav-link active" href="/pages/about.html">About<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/skills.html">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/contact.html">Contact</a>
-          </li>
-          <li class="nav-item resume">
-            <a class="nav-link resume-link" href="/pages/REM_TECH-B.pdf" target="_blank">Resume</a>
-          </li>
-        </ul>
-
-      </div>
-    </nav>
-
-
-
-    <h1> This is about page</h1>
-    
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html"><img class='logo' src="/images/brand1.png"></a>
   
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!--justify-content-end moves the content to the right-->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+  
+          <ul class="navbar-nav">
+            <!--All pages start with "/", meaning the top folder of your site-->
+            <li class="nav-item">
+              <a class="nav-link active" href="/pages/about.html">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contact.html">Contact</a>
+            </li>
+            <li class="nav-item resume">
+              <a class="nav-link resume-link" href="/pages/REM_TECH-B.pdf" target="_blank">Resume</a>
+            </li>
+          </ul>
+  
+        </div>
+      </nav>
+    </header>
+    
 
-   
+
+    <main>
+      <section class="left"></section>
+
+      <section>
+
+        <div class="about-me-container">
+          
+          <img class="profile-pic" src="/images/rp.jpg">
+          <div class="about-me">
+            <h2>About Me</h2>
+            <!-- <img class="profile-pic" src="/images/rp.jpg"> -->
+            
+            <p>
+              Hello! My name is Rembrand Paul Pardo and I am from Barcelona, Spain.
+              I enjoy learning new things and finding new ways of doing things.
+              Currently, I am studing Software Engineering at BYU. Prior this, I studied at Salt Lake Community College  <a class="slcc-link" href="http://www.slcc.edu" target="_blank">(SLCC)</a> 
+              where I finished an Associate's degree in Business. The wold of business has always been a passion of mine becuase I like people and I like numbers.
+            </p>
+            <p>
+              Software Engineering has become another passion of mine. I love how I can create new things with just lines of code. There are not limits to what programming can create. 
+              I have learned that with programming it is not always about what I know, but what and how I can figure out. Explore my website to find out more about what I have learned and done with programming.
+            </p>
+            <!-- <p>
+              Some of my other passions include music, movies, art and acting. Here is some of the things I love:
+            </p> -->
+          </div> 
+          
+        </div>
+
+        <div class="intro-hobby">
+          <p>Some of my other passions include music, movies, art and acting. Here is a litte taste:</p>
+        </div>
+
+        <div class="hobbies">
+          
+          <div class="hobby youtube">
+            <p>
+              One of my favorite songs is by the talented Justin Timberlake. Enjoy!
+            </p>
+            <iframe class="youtube-video" src="https://www.youtube-nocookie.com/embed/8YtRwSyO6CM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="hobby spotify">
+            <p>
+              Ever since I remember I've always loved music. You will find a song you like among my many playlists. Check it out!
+            </p>
+            <a class='spotify-link' href='https://open.spotify.com/user/rembrand.paul' target="_blank">
+              <i class="fa fa-spotify"></i>
+            </a>
+          </div>
+          <div class="hobby imdb">
+            <p>I enjoy movies and acting a lot. I beleive there is true art in some films and great power on knowing how to act. I had the chance to be part of a small project called "Book of Mormom videos." Check out the imdb profile that was created for me.
+            </p>
+            <a class='imdb-link' href='https://www.imdb.com/name/nm11523185/' target="_blank">
+              <i class="fa fa-imdb"></i>
+            </a>
+          </div>
+          <div class="hobby crest">
+            <p>Pardo's family crest:<br>
+              "We seek the perfect balance and constant improvement of body, mind, and spirit." 
+            </p>
+            <img class="crest-pic" src="/images/plain-crest.JPEG">
+          </div>
+          <div class="hobby quote">
+            <p>My favorite quote:<br>
+              <br>
+              “There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.” <br>
+              <br>
+              - Ernest Hemingway
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="right"></section>
+    </main> 
 
     <!-- NOTE: Icons can't work wiht :hover: 
       Link to video for icons:  https://youtu.be/Hskt1jN7JTc
     website to grab icons from: https://ionic.io/ionicons-->
     <!-- Link to video for icons that actually work: https://youtu.be/hqlu47FX_q8 -->
-    <div class='footer'>
-      <div class='footer-item footer-one'>
-        <a class='instagram-link' href='https://www.instagram.com/rembrand.paul/' target="_blank">
-          <i class="fa fa-instagram"></i>
-        </a>
+    <footer>
+      <div class='footer'>
+        <div class='footer-item footer-one'>
+          <a class='instagram-link' href='https://www.instagram.com/rembrand.paul/' target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+        <div class='footer-item footer-two'>
+          <a class='linkedin-link' href='https://www.linkedin.com/in/rembrandpardo/' target="_blank">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+        </div>
+        <div class='footer-item footer-three'>
+          <a class='git-link' href='https://github.com/BYUCS260/lab-1-photography-website-Thebatman7' target="_blank">
+            <!-- <ion-icon name="logo-github"></ion-icon> -->
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+        <div class='footer-item footer-four'>
+          <a class='twitter-link' href='https://twitter.com/rembrand_pardo' target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div> 
+        <div class='footer-item footer-five'>
+          <a class='facebook-link' href='https://www.facebook.com/profile.php?id=100010131761034' target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </div>
       </div>
-      <div class='footer-item footer-two'>
-        <a class='linkedin-link' href='https://www.linkedin.com/in/rembrandpardo/' target="_blank">
-          <i class="fa fa-linkedin-square"></i>
-        </a>
-      </div>
-      <div class='footer-item footer-three'>
-        <a class='git-link' href='https://github.com/BYUCS260/lab-1-photography-website-Thebatman7' target="_blank">
-          <!-- <ion-icon name="logo-github"></ion-icon> -->
-          <i class="fa fa-github"></i>
-        </a>
-      </div>
-      <div class='footer-item footer-four'>
-        <a class='twitter-link' href='https://twitter.com/rembrand_pardo' target="_blank">
-          <i class="fa fa-twitter"></i>
-        </a>
-      </div> 
-      <div class='footer-item footer-five'>
-        <a class='facebook-link' href='https://www.facebook.com/profile.php?id=100010131761034' target="_blank">
-          <i class="fa fa-facebook"></i>
-        </a>
-      </div>
-    </div>
+    </footer>
+    
 
     <!--These script tags contain links to JavaScript code that switches to a different menu system when you browse your site from a mobile device. We call this responsive design.-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
