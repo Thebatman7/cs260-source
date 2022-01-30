@@ -1,0 +1,267 @@
+* {
+  text-align: center;
+  color: #ccd6f6;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex: 1 0 auto;
+}
+
+main {
+  flex: 1 0 80vh;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+}
+
+section:first-child {
+  flex: 1;
+  background-color: #0a192f;
+}
+section:nth-child(2) {
+  flex: 6;
+  background-color: #0a192f;
+}
+section:last-child {
+  flex: 1;
+  background-color: #0a192f;
+}
+
+.about-me-container {
+  text-align:left;
+  display: flex;
+  margin-top: 5px;
+}
+.about-me-container img {
+  /* float: right; */
+  max-width: 20%;
+  max-height: 20%;
+  border-radius: 60%;
+  
+  height: 100%;
+  width: 100%;
+  float: left;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 20px;
+  filter: blur(2px);
+  /* filter: sepia(44%) saturate(685%) brightness(83%) hue-rotate(125deg); */
+}
+.about-me-container:hover img {
+  /* opacity: 0.2; */
+  border: 1.5px solid #1bc0b2;
+  filter:none;
+  /* filter: sepia(44%) saturate(685%) brightness(83%) hue-rotate(125deg); */
+  filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.308));
+}
+
+.about-me p {
+  text-align: justify;
+  width: 80%;
+  max-width: 900px;
+  font-size: 90%;
+}
+.about-me h2 {
+  text-align: start;
+  font-weight: 450;
+  line-height: 0.8;
+  font-size: 2.6em;
+  color: #1bc0b2;
+  font-size: 150%;
+}
+
+.slcc-link {
+  font-size: 20px;
+  color:rgb(27, 192, 178);
+  font-weight: 100;
+
+  font-size: 90%;
+}
+.slcc-link:hover {
+  text-decoration: none;
+  color: #06D47B;
+}
+.slcc-link:visited {
+  color: #2e5a97;
+}
+
+.intro-hobby {
+  margin-top: 3px;
+  margin-bottom: 0.1em;
+  padding-top: 0.5em;
+}
+.intro-hobby p{
+  font-size: 2.6em;
+  font-size: 90%;
+}
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.hobby {
+  border: 1px solid #1bc0b225;
+  border-radius: 3px;
+  width: 42vh;
+  height: 30vh;
+  margin: 1vh;
+  box-sizing: border-box;
+}
+
+.youtube {
+  align-items: center;
+  justify-content: center;
+}
+.youtube p {
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+  font-size: 0.9em;
+}
+.youtube-video {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.spotify p {
+  margin-bottom: 0.5em;
+  padding-top: 1.5em;
+  font-size: 0.9em;
+}
+.fa-spotify {
+  font-size: 2.5em;
+}
+.fa-spotify:hover {
+  color:rgb(27, 192, 178)
+}
+
+
+.imdb p {
+  padding-top: 0.5em;
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+.fa-imdb {
+  font-size: 1.4em;
+}
+
+.crest p{
+  padding-top: 0.2em;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+.crest img {
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 3%;
+  height: 29em;
+  width: 20em;
+ 
+}
+.crest-pic:hover {
+  position:relative;
+  max-width: 90%;
+  max-height: 90%;
+  top:-80px;
+  right:-17px;
+  width:700px;
+  height:auto;
+  display:block;
+  z-index:999;
+}
+
+.quote {
+  text-align: center;
+}
+.quote p {
+  padding-top: 0.9em;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  align-self: center;
+}
+
+
+.youtube,
+.spotify,
+.imdb,
+.crest,
+.quote {
+  background-color: #071830;
+}
+.youtube:hover,
+.spotify:hover,
+.imdb:hover,
+.crest:hover,
+.quote:hover {
+  transform: translate(0, -10px);
+  filter: drop-shadow(0 0 0.7rem rgba(255, 255, 255, 0.199));
+}
+.hobbies p {
+  background-color: #071830;
+}
+.hobbies h2 {
+  text-align: start;
+  font-weight: 450;
+  line-height: 0.8;
+  font-size: 2.6em;
+  font-size: 90%;
+}
+
+
+.footer {
+  position: relative;
+}
+
+/* footer {
+  flex: 1 0 5vh;
+  background: rgb(0, 148, 37);
+  border: 1px solid rgb(0, 148, 37);
+} */
+
+@media (orientation: portrait) {
+  main {
+    width: auto;
+    /* flex-direction: column; */
+  }
+}
+
+/* Phone iphoneXR*/
+@media (max-width: 500px) {
+  footer {
+    display: none;
+  }
+  main {
+    flex: 1 0 100vh;
+  }
+
+  section:first-child {
+    display:none;
+    flex: 0;
+  }
+  section:nth-child(2) {
+    flex: 6;
+    background-color: hsl(172, 68%, 38%);
+  }
+  section:last-child {
+    display: none;
+    flex: 0;
+  }
+
+  .about-me-container {
+    display:block;
+    padding-left: 50px;
+  }
+}

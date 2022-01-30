@@ -1,0 +1,220 @@
+* {
+  text-align: center;
+  color: #ccd6f6;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex: 1 0 auto;
+}
+
+main {
+  flex: 1 0 80vh;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+}
+
+section:first-child {
+  flex: 1;
+  background-color: #0a192f;
+}
+section:nth-child(2) {
+  flex: 7;
+  background-color: #0a192f;
+}
+section:last-child {
+  flex: 1;
+  background-color: #0a192f;
+}
+
+.middle {
+  padding-top: 4em;
+}
+
+.intro-contact h2 {
+  font-weight: 450;
+  line-height: 0.8;
+  font-size: 2.6em;
+  color: #1bc0b2;
+  font-size: 150%;
+}
+
+.intro-contact p {
+  font-size: 2.6em;
+  font-size: 90%;
+  padding-bottom: 1em;;
+}
+.contact-p {
+  margin-bottom: 0.3em;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+  margin-top: 0px;
+  align-items: center;
+}
+.other-links-intro {
+  padding-top: 0.5em;
+  background-color: #071830;
+}
+.contact-me {
+  border: 2px solid #1bc0b225;
+  border-radius: 5px;
+  margin: 1vh;
+  box-sizing: border-box;
+  width: 60%;
+  height: 60%;
+  background-color: #071830;
+}
+.email-link {
+  background-color: transparent;
+  border: 1px solid #12EBC9;
+  color: #12EBC9;
+  border-radius: 3px;
+  line-height: 1.2;
+  padding: 0.20rem;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  margin-top: 40px;
+  font-weight: 100;
+  text-decoration: none;
+}
+.email-link:hover {
+  background: #64ffdb46;
+  text-decoration: none;
+  color:rgb(27, 192, 178)
+}
+
+
+.contact-me:hover {
+  transform: translate(0, -1px);
+  filter: drop-shadow(0 0 0.7rem rgba(191, 240, 241, 0.041));
+}
+.contact-me p {
+  background-color: #071830;
+  margin-bottom: 0.9em;
+  padding-top: 0.6em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 0.9em;
+}
+
+.contact-me h2 {
+  text-align: start;
+  font-weight: 450;
+  line-height: 0.8;
+  font-size: 2.6em;
+  font-size: 90%;
+  background-color: #071830;
+}
+
+.other-links {
+  justify-content:center;
+  display: flex;
+  background-color: #0a192f;
+}
+
+.link-item {
+  background-color: #0a192f;
+  /*That flex: 1; line tells the items to stretch to match the width of .footer.*/
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: #071830;
+  
+}
+
+.fab,
+.fas {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+  background-color: #071830;
+}
+
+
+.footer {
+  position: relative;
+  size:0.5em;
+  padding-bottom: 0;
+}
+.fa-instagram,
+.fa-linkedin,
+.fa-twitter,
+.fa-facebook {
+  font-size: 1.5em;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.fa-instagram {
+  color: #ae09f0;
+}
+.fa-linkedin {
+  color: #2764e7;
+}
+.fa-twitter {
+  color: #09baf0;
+}
+.fa-facebook {
+  color: #0057f8;
+}
+
+.fa-instagram:hover,
+.fa-linkedin:hover,
+.fa-twitter:hover,
+.fa-facebook:hover {
+  transform: translate(0, -10px);
+}
+
+/*poistion fixed puts the div at the bottom of page
+left: 50% and transform: translateX(-50%); puts a fixed div in the middle of page.*/
+.copyright {
+  position:fixed;
+  bottom:0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.copyright p {
+  margin-bottom: 1.3em;
+  font-size: 0.37em;
+}
+@media (orientation: portrait) {
+  main {
+    width: auto;
+  }
+}
+
+/* Phone iphoneXR*/
+@media (max-width: 500px) {
+  footer {
+    display: none;
+  }
+  main {
+    flex: 1 0 100vh;
+  }
+
+  section:first-child {
+    display:none;
+    flex: 0;
+  }
+  section:nth-child(2) {
+    flex: 6;
+    background-color: #071830;
+  }
+  section:last-child {
+    display: none;
+    flex: 0;
+  }
+}

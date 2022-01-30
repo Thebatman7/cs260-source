@@ -1,0 +1,359 @@
+/*Resetting default box behavior.*/
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #0a192f;
+    box-sizing: border-box;
+    /* color: #12EBC9 */
+    /*background-color #13294B*/
+    /* font-family: "OCR A Std", "Lucida Console", monospace; */
+    font-family: Iceland; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Iceland; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Iceland; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Iceland; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Iceland; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;;
+  }
+
+/* Menu */
+.bg-light {
+  background-color: #0a192f !important;
+}
+.nav-link {
+  color: #ccd6f6 !important;
+  font-family: Iceland; font-size: 3.3vh; font-style: normal; font-variant: normal; font-weight: 400; line-height: 26.4px; } h3 { font-family: Iceland; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Iceland; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Iceland; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Iceland; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+}
+.navbar {
+  /* border: 1px solid #2fcf4a; */
+  height: auto;
+  padding: 0px 25px; /*Default top, bottom, left, and right padding was a lot.*/
+}
+.logo {
+  width: min(12vw, 200px); /*Needed to make logo responsive. Without it logo overlaps navbar.*/
+}
+.resume {
+  padding-top: 0.35em;
+}
+.resume-link {
+  color:rgb(27, 192, 178) !important;
+  font-weight: 200 !important;
+  background-color: transparent;
+  border: 1px solid #12EBC9;
+  color: #12EBC9;
+  border-radius: 3.0px;
+  line-height: 1.2;
+  padding: 0.1em;
+}
+.resume-link:hover {
+  background: #64ffdb46;
+}
+.nav-link:hover {
+  color: rgb(27, 192, 178) !important;
+}
+.active {
+  color: rgb(27, 192, 178) !important;
+}
+
+
+.intro-container {
+  /* border: 4px solid #e70591; */
+  background-color: #0a192f;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  /* height: calc(100% - 159.5px); This makes this div cover the whole page. It is all (100%) minus (the size of navbar and footer) */
+  /*padding for div:  top right bottom left: padding: 80px 0px 100px 0px;  */
+  width: 100%;
+  height: calc(100vh - 146px);
+}
+.intro {
+  /* border: 4px solid #fc9906; */
+  background-color: #0a192f;
+  align-self: center;
+  justify-content: center;
+  width: 69%;
+  margin-right: 2.5em;
+  margin-left: auto; 
+}
+
+.uno h1 {
+  margin: 0px 0px 15px 4px;
+  color:rgb(27, 192, 178);
+  font-size: 1.0em;
+  font-weight: 400;
+  font-size: 90%;
+}
+.dos h2 {
+  color: #ccd6f6;
+  font-weight: 450;
+  line-height: 0.8;
+  font-size: 2.6em;
+
+  font-size: 150%;
+}
+.tres h3 {
+  color: #8892b0;
+  margin-top: 7px;
+  font-weight: 600;
+  line-height: 0.9;
+  font-size: 2.3em;
+  width: auto;
+  font-size: 150%;
+}
+
+
+.intro-body p {
+  /* border: 2px solid #cb06dd; */
+  margin: 20px 0px 0px;
+  align-self: center;
+  max-width: 900px;
+  width: 70%;
+
+  font-size: 90%;
+  text-align: justify;
+}
+.byu-link {
+  font-size: 20px;
+  color:rgb(27, 192, 178);
+  font-weight: 100;
+
+  font-size: 90%;
+}
+.byu-link:hover {
+  text-decoration: none;
+  color: #06D47B;
+}
+.byu-link:visited {
+  color: #2e5a97;
+}
+.intro-fourth {
+  color: #44618a;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+
+.explore-container {
+  display: flex;
+}
+.explore-link {
+  background-color: transparent;
+  border: 1px solid #12EBC9;
+  color: #12EBC9;
+  border-radius: 3px;
+  line-height: 1.2;
+  padding: 0.20rem;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  margin-top: 40px;
+  font-weight: 100;
+  text-decoration: none;
+}
+.explore-link:hover {
+  background: #64ffdb46;
+  text-decoration: none;
+  color:rgb(27, 192, 178)
+}
+.explore-link:visited{
+  color:rgb(27, 192, 178)
+}
+
+  /*
+  .header-container {
+    
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-self: center;
+  }
+  .header {
+    background-image: url(../images/peter.jpg);
+    background-size: 800px 350px;
+    background-repeat: no-repeat;
+    background-position: middle;
+    height: 300px;
+    width: 800px;
+    opacity: 0.91;
+  }
+  .header p {
+    font-size: 60px;
+    color: #ffffff;
+    padding-left: 373px;
+    padding-top: 60px;
+    font-weight: bold;
+  }
+
+
+  .photo-grid-container {
+    display: flex;
+    justify-content: left;
+  }
+  
+  .photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid #FFFFFF; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  /*Added to display images without cropping.
+  .photo-grid-item img {
+      height: 500px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin: 10px;
+      border-radius: 1%;
+  } */
+
+.copyright p{
+  color: #8892b0;
+  font-size: 0.2em;
+  flex: 1;
+  text-align: center;
+}
+
+.footer {
+  /* border: 2px solid rgb(209, 65, 8); */
+  display: flex;
+  justify-content: space-between;
+  /* height: 1.7rem; */
+  /* height: 6%; */
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.footer-item {
+  /* border: 2px solid rgb(4, 61, 28); */
+  background-color: #0a192f;
+  color: #12EBC9;
+  /*That flex: 1; line tells the items to stretch to match the width of .footer.*/
+  flex: 1;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+.fa { 
+  color: #8892b0;
+  vertical-align: middle;
+  font-size: 0.9em;
+}
+.fa:hover {
+  color:rgb(27, 192, 178)
+}
+.fa:visited {
+  color: #2e5a97;
+}
+
+
+
+
+  /* .footer-two { */
+    /*
+    We can make the second item grow twice as fast as the other two with the following rule.
+    Compare this to the justify-content property, which distributes extra space between items.
+    This is similar, but now we’re distributing that space into the items themselves.
+    The result is full control over how flex items fit into their containers.
+    */
+    /* flex: 1;
+  } */
+
+  /* .footer-one,
+  .footer-three {
+    background-color: #0a192f; */
+    /*flex: initial falls back to the item’s explicit width property. This lets us combine static and flexible boxes in complex ways.*/
+    /* flex: initial;
+    width: 250px; */
+    /*
+    Without that flex: initial; line, the flex: 1; declaration would be inherited from the .footer-item rule, causing the width properties to be ignored. 
+    initial fixes this, and we get a flexible layout that also contains fixed-width items.
+    When you resize the browser window, you’ll see that only the middle box in the footer gets resized.
+    */
+  /* } */
+/*
+Flexbox gave us a ton of amazing new tools for laying out a web page. Compare these techniques to what we were able to do with floats, and it should be pretty clear that flexbox is a cleaner option for laying out modern websites:
+
+Use display: flex; to create a flex container.
+Use justify-content to define the horizontal alignment of items.
+Use align-items to define the vertical alignment of items.
+Use flex-direction if you need columns instead of rows.
+Use the row-reverse or column-reverse values to flip item order.
+Use order to customize the order of individual elements.
+Use align-self to vertically align individual items.
+Use flex to create flexible boxes that can stretch and shrink.
+*/
+  
+/*
+Flexbox uses two types of boxes that we’ve never seen before: “flex containers” and “flex items”. 
+The job of a flex container is to group a bunch of flex items together and define how they’re positioned.
+Every HTML element that’s a direct child of a flex container is an “item”. Flex items can be manipulated individually,
+but for the most part, it’s up to the container to determine their layout.
+*/
+ /*----------------------------------------------------------------------------------------------*/
+
+/*
+“Responsive design” refers to the idea that your website should display equally well in everything from widescreen monitors to mobile phones.
+It’s an approach to web design and development that eliminates the distinction between the mobile-friendly version of your website and its desktop counterpart. 
+Media queries always begin with the @media “at-rule” followed by some kind of conditional statement, and then some curly braces.
+Inside the curly braces, you put a bunch of ordinary CSS rules.
+The browser only pays attention to those rules if the condition is met.
+*/
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  body {
+      background-color: #2fcf4a;
+  }
+  .uno h1 {
+    font-size: 0.7em;
+  }
+  .dos h2 {
+    font-size: 0.9em;
+  }
+  .tres h3 {
+    font-size: 0.9em;
+  }
+
+  .intro-body p {
+    font-size: 0.7em;
+  }
+
+  .intro-container {
+    height: inherit;
+  }
+  .explore-container a{
+    size: 5em;
+    font-size: 0.8em;
+  }
+
+  .footer {
+    position: relative;
+  }
+
+  .footer {
+    display:none;
+  }
+
+  .copyright {
+    display: none;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-color: #77127a;
+    }
+    .copyright {
+      display: none;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #ffffff;
+    }
+}
+

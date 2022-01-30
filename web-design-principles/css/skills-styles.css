@@ -1,0 +1,188 @@
+* {
+  text-align: center;
+  color: #ccd6f6;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex: 1 0 auto;
+}
+
+main {
+  flex: 1 0 80vh;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+}
+
+section:first-child {
+  flex: 1;
+  background-color: #0a192f;
+}
+section:nth-child(2) {
+  flex: 7;
+  background-color: #0a192f;
+}
+section:last-child {
+  flex: 1;
+  background-color: #0a192f;
+}
+
+.skills-h2 {
+  margin-bottom: 0.5em;
+}
+.intro-skills h2 {
+  font-weight: 450;
+  line-height: 0.8;
+  font-size: 2.6em;
+  color: #1bc0b2;
+  font-size: 150%;
+}
+
+.intro-skills p {
+  font-size: 2.6em;
+  font-size: 90%;
+  padding-top: 0.5em;
+}
+.skills-p {
+  margin-bottom: 0.3em;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+  margin-top: 0px;
+  align-items: center;
+}
+
+.skill {
+  border: 2px solid #1bc0b225;
+  border-radius: 5px;
+  margin: 1vh;
+  box-sizing: border-box;
+  width: 30%;
+  height: 50%;
+}
+
+.skill {
+  background-color: #071830;
+}
+.skill:hover {
+  transform: translate(0, -20px);
+  filter: drop-shadow(0 0 0.7rem rgba(191, 240, 241, 0.199));
+}
+.skill p {
+  background-color: #071830;
+  margin-bottom: 0.9em;
+  padding-top: 0.6em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 0.9em;
+}
+
+.skills h2 {
+  text-align: start;
+  font-weight: 450;
+  line-height: 0.8;
+  font-size: 2.6em;
+  font-size: 90%;
+}
+
+.fab,
+.fas {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+  background-color: #071830;
+  
+}
+
+.fa-java {
+  color: #0f62fc;
+}
+.fa-aws {
+  color: #f19100;
+}
+.fa-database {
+  color: rgb(48, 11, 182);
+}
+.fa-microsoft {
+  color: #08c0f8;
+}
+.fa-git-square{
+  color: rgb(209, 157, 13);
+}
+.fa-sitemap {
+  color: rgb(7, 126, 23);
+}
+.fa-language {
+  color: rgb(140, 157, 233);
+}
+.fa-code {
+  color: rgb(66, 204, 24);
+}
+.fa-python {
+  color: rgb(138, 17, 219);
+}
+.fa-file-code {
+  color: rgb(205, 219, 10);
+}
+
+.footer {
+  position: relative;
+  size:0.5em;
+  padding-bottom: 0;
+}
+.fa-instagram,
+.fa-linkedin,
+.fa-github,
+.fa-twitter,
+.fa-facebook {
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+
+.fa-instagram:hover,
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-twitter:hover,
+.fa-facebook:hover {
+  color:rgb(27, 192, 178)
+}
+
+
+@media (orientation: portrait) {
+  main {
+    width: auto;
+  }
+}
+
+/* Phone iphoneXR*/
+@media (max-width: 500px) {
+  footer {
+    display: none;
+  }
+  main {
+    flex: 1 0 100vh;
+  }
+
+  section:first-child {
+    display:none;
+    flex: 0;
+  }
+  section:nth-child(2) {
+    flex: 6;
+    background-color: hsl(172, 68%, 38%);
+  }
+  section:last-child {
+    display: none;
+    flex: 0;
+  }
+}
