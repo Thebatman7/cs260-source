@@ -116,10 +116,7 @@
 }
 .byu-link:hover {
   text-decoration: none;
-  color: #06D47B;
-}
-.byu-link:visited {
-  color: #2e5a97;
+  color: rgb(27, 192, 178);
 }
 .intro-fourth {
   color: #44618a;
@@ -242,9 +239,6 @@
 }
 .fa:hover {
   color:rgb(27, 192, 178)
-}
-.fa:visited {
-  color: #2e5a97;
 }
 
 
