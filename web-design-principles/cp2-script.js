@@ -13,7 +13,6 @@ document.getElementById('getButton').addEventListener('click', function(event) {
   .then(response => response.json())
   .then(json => {
     console.log('Success:', json);
-
     if(arraysAreIdentical(previousMemes, json)) {
       let message = "<div class=\"item\"> <p>Sorry memes are precious we have recieved the same set of memes. Try again.</p> </div>";
       document.getElementById("memes").innerHTML= message;
