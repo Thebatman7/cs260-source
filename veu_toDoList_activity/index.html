@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Vue Todo</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+      <h1>A List of Things To Do</h1>
+
+      <p v-show="activeTodos.length === 0">You are done with all your tasks! Good job!</p>
+
+      <!--We use v-on to tell Vue that when it sees a submit event for the form, it should call the addItem method.
+        The addition of .prevent to the submit event will prevent the standard browser behavior that
+        submits the form to the server and causes the page to reload.-->
+      <form v-on:submit.prevent="addItem">
+        <!--We use v-model to bind the text input to a variable called message that Vue will supply.-->
+        <input type="text" v-model="message">
+        <button type="submit">Add</button>
+      </form>
+
+      <!--
+        A button that, when we click it, calls the showAll method.
+        A button that, when we click it, calls the showActive method.
+        A button that, when we click it, calls the showCompleted method.
+        A button that, when we click it, calls the deleteCompleted method.
+        A div that wraps these buttons and is only shown if the filteredTodos array is not empty.
+        We have also changed the li tag so it loops over the filteredTodos array.
+      -->
+      <div class="controls">
+        <button v-on:click="showAll()">Show All</button>
+        <button v-on:click="showActive()">Show Active</button>
+        <button v-on:click="showCompleted()">Show Completed</button>
+        <button v-on:click="deleteCompleted()">Delete Completed</button>
+      </div>
+
+
+      <ul>
+        <!--We add drag-and-drop on the list items, so you can rearrange them. Vue integrates easily with HTML 5 dragging and dropping
+        This will allow the items to be dragged and dropped. The draggable attribute is standard HTML 5 syntax to indicate the item can be dropped.
+        The v-on:dragstart attribute calls the dragItem method when dragging starts. 
+        The v-on:dragover attribute prevents HTML5 from triggering an event every time an item is dragged over another. 
+        The v-on:drop attribute calls the dropItem method when the item is dropped.-->
+        <li v-for="item in filteredTodos" draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
+           <!-- <label>{{ item.text }}</label> -->
+           <!--We use v-model to connect the value of the input (whether the box is checked) to the completed property 
+               on the item object. This way, when we need to redraw the list, the box will only be checked if the item 
+               is actually completed.
+
+               We use v-bind to tell Vue that the class attribute should incude a completed class that is bound to the 
+               value of completed on the item property. If you look in style.css, you will see that the completed class 
+               will make the item appear crossed out.
+               
+               For delete we use a standard button element, with the v-on attribute that tells Vue to call the 
+               deleteItem method when the click event is triggered for the button.
+               We pass the current item to this method.
+               Note that the item passed to dragItem is the item being dragged, and the item being dropped is the item it is being dropped onto.
+               Remember, the li tag is generated for each separate item, so these are set to different variables.-->
+          <input type="checkbox" v-model="item.completed"/>
+          <label v-bind:class="{ completed: item.completed }">{{ item.text }}</label>
+          <button v-on:click="deleteItem(item)" class="delete">X</button>
+
+        </li>
+      </ul>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
