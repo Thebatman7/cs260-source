@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+  <!--Needed for icons that work with hover.
+  Notice: This is late version 5.13.0-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <title>XKCD Browser</title>
+</head>
+
+<body>
+
+  <h1>XKCD Browser</h1>
+
+  <div id="app">
+
+    <div v-if="loading">
+      <p>Loading...</p>
+    </div>
+    <div v-else>
+
+      <p>
+        <button v-on:click="previousComic" class="button">Previous</button>
+        <button v-on:click="nextComic" class="button">Next</button>
+        <button v-on:click="randomComic" class="button">Random</button>
+        <button v-on:click="firstComic" class="button">First Comic</button>
+        <button v-on:click="lastComic" class="button">Last Comic</button>
+      </p>
+
+      <h2>{{current.title}}</h2>
+      <img v-bind:src="current.img" v-bind:alt="current.alt">
+      <p>{{current.alt}}</p>
+      <p><i>#{{current.num}}, drawn on {{current.day}} {{month}} {{current.year}}</i></p>
+
+      <!--@rating-selected = "setRating" is using the shorthand for v-on-->
+      <star-rating @rating-selected ="setRating" @rating-selected="rated = true":star-size="20" :increment="0.5" inactive-color="#F5FAFF" active-color="#DA1F28" :border-width="1"></star-rating>
+      <div v-if="rated">
+        <p>Average Rating: {{ratings[number].average}}</p>
+      </div>
+      
+
+      <h3>Add a Comment</h3>
+      <form v-on:submit.prevent="addComment">
+        <input v-model="addedName" placeholder="Name"></p>
+        <textarea v-model="addedComment"></textarea>
+        <br />
+        <button type="submit" class="button">Comment</button>
+      </form>
+      <h3>Comments</h3>
+      <div v-for="comment in comments[number]">
+        <hr>
+        <p>{{comment.text}}</p>
+        <p>{{comment.dateTime}}</p>
+        <p><i>-- {{comment.author}}</i></p>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <footer id="theFooter">
+    <div class='footer'>
+      <div class='footer-item footer-two'>
+        <a class='linkedin-link' href='https://www.linkedin.com/in/rembrandpardo/' target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div class='footer-item footer-three'>
+        <a class='git-link' href='https://github.com/Thebatman7/cs260-source/tree/lab1/web-design-principles' target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class='footer-item footer-four'>
+        <a class='twitter-link' href='https://twitter.com/rembrand_pardo' target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div> 
+    </div>
+  </footer>
+
+
+  <script type="text/JavaScript" src="https://MomentJS.com/downloads/moment-with-locales.js"></script>
+  <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

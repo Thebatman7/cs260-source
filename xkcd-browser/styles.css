@@ -1,0 +1,68 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: #f3f3f3;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+}
+
+.button {
+    font-weight: 200;
+    background-color: transparent;
+    border: 1.5px solid #000000;
+    color: #000000;
+    border-radius: 2px;
+    line-height: 1.2;
+    padding: 0.1em;
+}
+.button:hover {
+    background-color: #8f0e0e5e;
+}
+.button:focus,
+.button:active
+.button:after {
+    outline: none;
+    border: 1px solid #000000;
+    color: #020202b9;
+    border-radius: 3px;
+    line-height: 1.2;
+}
+
+
+#theFooter {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+  .footer {
+    position: relative;
+    size:0.2em;
+    padding-bottom: 0;
+  }
+  
+  .fa-linkedin,
+  .fa-github,
+  .fa-twitter {
+    font-size: 0.9em;
+    vertical-align: middle;
+    color: #000000;
+  }
+  
+  
+  .fa-linkedin:hover,
+  .fa-github:hover,
+  .fa-twitter:hover {
+    color:#DA1F28
+  }
+  
