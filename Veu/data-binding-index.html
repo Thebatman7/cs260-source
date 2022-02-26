@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--https://brittanychiang.com/#about http://www.ericwadkins.com/ http://www.meganlandau.com/-->
+<html lang='en'>
+    <head>
+
+    </head>
+
+    <body>
+
+
+
+        <!--Your HTML needs a root element. Vue will control the DOM inside this element.-->
+        <div id="root">
+            <!--This creates two interactions with Vue. The first uses the v-model directive, to create a data binding,
+                telling Vue that the message property is bound to the input element. The second uses mustache template syntax 
+                to print out the contents of the message property.-->
+            <!-- data binding using the v-model directive -->
+            <input type="text" v-model="message">
+            <!-- template using mustache syntax -->
+            <p>The value of the input is: {{ message }}.</p>
+        </div>
+
+
+   
+        <!--We load the Vue JavaScript library.-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="data-binding-script.js"></script>
+    </body>
+</html>

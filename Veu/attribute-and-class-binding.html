@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--https://brittanychiang.com/#about http://www.ericwadkins.com/ http://www.meganlandau.com/-->
+<html lang='en'>
+    <head>
+        <link rel='stylesheet' href='attribute-and-class-binding-styles.css' />
+    </head>
+
+    <body>
+        <!--To bind an attribute, use the v-bind directive
+            This tells Vue that the title of the button (which is shown when you hover over it)
+            should be bound to the title property.-->
+        <div id="root">
+            <!-- You can also bind a class of an HTML element to a Vue property.
+            This will bind the property className to the class of the h1 element. 
+            Notice we use : istead of v-bind: -->
+            <h1 :class="className">Hello World</h1>
+
+            <button v-bind:title="title">Hover over me</button>
+
+
+            <!-- This tells Vue to bind the class of the button to the CSS .blue class, but only if the isLoading property is true. -->
+            <button :class="{ 'blue': isLoading}">Click Me</button>
+
+            <!--Adding an event listener: We are telling the Vue that if the button is clicked it should call the
+            toggleLoading emthod.-->
+            <button :class="{ 'blue': isLoading}" @click="toggleLoading">Click Me</button>
+
+
+        </div>
+
+   
+        <!--We load the Vue JavaScript library.-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="attribute-and-class-binding-script.js"></script>
+    </body>
+</html>

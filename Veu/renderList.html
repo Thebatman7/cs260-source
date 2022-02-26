@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--https://brittanychiang.com/#about http://www.ericwadkins.com/ http://www.meganlandau.com/-->
+<html lang='en'>
+    <head>
+
+    </head>
+
+    <body>
+
+
+
+        <div id="root">
+            <ul>
+                <!-- Loop through each name in names and render it. This will create a set of li elements -->
+                <li v-for="name in names">{{name}}</li>
+                <!-- This is the same, but we are using the v-text directive instead of mustache syntax
+                <li v-for="name in names" v-text="name"></li>-->
+            </ul>
+            <!--The v-model directive binds the input field to the newName property on the data object.
+                The v-on directive tells Vue that it should call an event handler called addName when the button is clicked.-->
+            <!--Let the user enter a new name and bind it to the newName property -->
+            <input type="text" v-model="newName">
+            <!-- Create an event handler for the click event -->
+            <button v-on:click="addName">Add Name</button>
+        </div>
+
+
+   
+        <!--We load the Vue JavaScript library.-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="renderList-script.js"></script>
+    </body>
+</html>
