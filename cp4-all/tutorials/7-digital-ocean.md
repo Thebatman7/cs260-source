@@ -203,6 +203,17 @@ npm install
 npm run build
 ```
 
+You might need to use `sudo` for some of the commnds if there is a `EACCES` error
+
+
+```
+cd front-end
+sudo npm install
+export NODE_OPTIONS=--openssl-legacy-provider
+npm run build
+```
+
+
 Now copy your public files to `/var/www`. For example:
 
 ```
