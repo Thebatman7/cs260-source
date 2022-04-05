@@ -181,6 +181,15 @@ const upload = multer({
 });
 ```
 
+important notes about running the command above: 
+1. Make sure that it is /var and not just var because a folder var will be created in the back end.
+2. When uploading the image you might have some permission issues in the images folder inside /var/www/museum.mydomain.com. To change this run this command: 
+```
+sudo chmod 777 <name of folder> = sudo chmod 777 images
+
+```
+
+
 You need to change `dest` so that it points to the correct directory.
 
 
